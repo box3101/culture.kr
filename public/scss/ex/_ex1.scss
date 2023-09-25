@@ -1,3 +1,11 @@
-h1 {
-  display: block;
+.com-title {
+  &__img {
+    display: block;
+  }
+  &__txt {
+    display: block;
+  }
+  p {
+    display: block;
+  }
 }

@@ -192,7 +192,13 @@ table {
 }
 
 /*이은영*/
-h1 {
+.com-title__img {
+  display: block;
+}
+.com-title__txt {
+  display: block;
+}
+.com-title p {
   display: block;
 }
 
