@@ -1,10 +1,86 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1 class="logo">
-	이미지
-  </h1>
-</Layout>
+  <section class="bg_top">
+    <div class="board_blue">
+      <img
+        src="../../public/img/img_board_blue.png"
+        alt="boardBackground"
+        class="img_board_blue"
+      />
+      <ul class="contents_Inner">
+        <li>
+          <h1 class="headTitle f-yg">
+            초성 빈칸에 직접 정답을 채워 <span class="f-yg">첫 번째 정답</span
+            >을 맞춰보세요!~
+          </h1>
+        </li>
+        <li class="box-middle">
+          <div class="questionBox">
+            <h2>2023년 문화의달은 어디에서 진행될까요?</h2>
+            <p class="qBox_inner">
+              1004개의 섬으로 이루어진 지리적 특성을 표현하여 풍요로운 미래를
+              향해 전진하는 발전적이고 진취적인 의미의 지역 브랜드입니다.
+            </p>
+          </div>
+        </li>
+        <li class="inputWrap">
+          <input
+            class="inputBox m-rt36"
+            type="text"
+            id="answerTxt-01"
+            maxlength="1"
+            placeholder="ㅊ"
+          />
+          <input
+            class="inputBox m-rt36"
+            type="text"
+            id="answerTxt-02"
+            maxlength="1"
+            placeholder="ㅅ"
+          />
+          <input
+            class="inputBox m-rt90"
+            type="text"
+            id="answerTxt-03"
+            maxlength="1"
+            placeholder="ㅅ"
+          />
+          <input
+            class="inputBox m-rt36"
+            type="text"
+            id="answerTxt-04"
+            maxlength="1"
+            placeholder="ㅅ"
+          />
+          <input
+            class="inputBox m-rt36"
+            type="text"
+            id="answerTxt-05"
+            maxlength="1"
+            placeholder="ㅇ"
+          />
+        </li>
 
+        <li class="box-small">
+          <div class="box_left">
+            <h3 class="f-yg">힌트</h3>
+            <span class="hint_title">
+              <p>2023 문화의 달 행사가 열리는 장소를 상징하는</p>
+              <p>
+                <sapn class="hint_highlight f-yg"
+                  >지역명이 포함된 브랜드로고</sapn
+                >를 찾아보세요!
+              </p>
+            </span>
+          </div>
+          <a href="" class="box_right f-yg">홍보페이지 보러가기</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+<section class="bg_middle"></section>
+<section class="bg_bottom"></section>

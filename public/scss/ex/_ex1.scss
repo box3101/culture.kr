@@ -1,11 +1,217 @@
 .com-title {
-  &__img {
-    display: block;
-  }
-  &__txt {
-    display: block;
-  }
-  p {
-    display: block;
-  }
+    &__img {
+      display: block;
+    }
+    &__txt {
+      display: block;
+    }
+    p {
+      display: block;
+    }
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+%bg-default{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.bg_top{   
+    @extend %bg-default;
+    height: 100%;
+    min-height:1507px;
+    max-height: 1507px;
+    background-image: url(../../img/bg_top.png);
+}
+
+.bg_middle{   
+    @extend %bg-default;
+    height: 100%;
+    min-height:1564px;
+    max-height: 1564px;
+    background-image: url(../../img/bg_middle.png);
+    z-index: -1;
+}
+
+.bg_bottom{   
+    @extend %bg-default;
+    height: 100%;
+    min-height:1564px;
+    max-height: 1564px;
+    background-image: url(../../img/bg_bottom.png);
+}
+
+%board_blueWrap{
+    top: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+.board_blue{ @extend %board_blueWrap; position: relative;}
+
+.img_board_blue {
+    @extend %board_blueWrap;
+    width: 1280px;
+    height: 960px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+// 질문 박스 공통 영역 
+%box-inner{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%; 
+    border-radius: 25px;
+}
+
+//background-Color
+%boxColor-white{background-color: #ffffff }
+%boxColor-blue{background-color: #316EBD }
+%boxColor-pink{background-color: #EC95D5 }
+%boxColor-purple{background-color: #6B33A4}
+%boxColor-sky{background-color: #45EBF8 }
+
+//font-Color
+%fontColor-white{color: #ffffff }
+%fontColor-blue{color: #316EBD }
+%fontColor-purple{color: #743BBC }
+%fontColor-pink{color: #FA73D0 }
+%fontColor-lime{color: #4AFF00 }
+%fontColor-magenta{color: #DE26CE }
+
+//input box
+%input[type=text]{width: 140px;height: 140px;line-height: 140px;font-size: 100px;color: #111;background: #fff; vertical-align: middle;text-align: center;font-weight: 800;  border: 6px solid #FF6C00;  outline: none; font-family: "SCDream", sans-serif; }
+%input[type=text]::placeholder {text-align: center; font-size:100px ; color:#CCCCCC ; font-weight: 700; padding: 20px 0  }
+%input[type=text]:hover, input[type=text]:focus{background-color: transparent;}
+
+// common
+.m-rt36{margin-right: 36px;}
+.m-rt90{margin-right: 90px;}
+
+
+.contents_Inner{
+    @extend %board_blueWrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 1150px;
+    height: 800px;
+    padding-top: 150px;
+
+    .headTitle{ @extend %fontColor-purple; font-size:42px; 
+        span{@extend %fontColor-pink;
+            position: relative;
+            &::before {   
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: -70%;
+                left:0;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                height: 50px;
+                background: url("../../img/ico_star.png") no-repeat 50% 50% / 100% auto;}
+            &::after {   
+                content: '';
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left:0;
+                transform:translate(0, 100%);
+                width: 240px;
+                height:20px;
+                background: url("../../img/ico_wave_pink.png") no-repeat 50% 50% / 100% auto;}                
+        }
+    }
+    .box-middle{ @extend %box-inner; @extend %boxColor-blue;}
+       
+    .questionBox{ 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: calc(100% - 180px);
+        margin-left: auto;
+
+        h2{font-size:40px ; @extend %fontColor-white; font-weight:700 ;}
+
+        .qBox_inner{
+            @extend %boxColor-white; 
+            @extend %fontColor-blue;
+             border-radius: 20px;font-size: 24px; line-height: 40px;font-weight:600 ; padding: 20px;margin-top: 15px;width: 100%; height: auto;}
+
+        &::before {   
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left:-8%;
+            transform: translate(-50%, 35%);
+            width: 125px;
+            height: 125px;
+            background: url("../../img/img_flower01.png") no-repeat 50% 50% / 100% auto;}
+        }
+
+    .box-small{@extend %box-inner; @extend %boxColor-purple;
+        justify-content: space-between;
+        padding: 20px;
+        .box_left{display: flex; 
+            h3{min-width: 125px; height: 80px; line-height: 80px; font-size: 30px;color:#6B33A4;     background-color:#45EBF8; border-radius: 50px; text-align: center; 
+                position: relative;
+                &::before {   
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    transform: translate(-0%, -80%);
+                    width: 60px;
+                    height: 70px;
+                    background: url("../../img/ico_hint.png") no-repeat 50% 50% / 100% auto;}
+            }
+        }
+    
+        .hint_title{display: block; padding-left: 40px;
+            p{@extend %fontColor-white;font-size:25px;  width: 100%;  padding-top: 35px;
+                &:first-child{padding-top: 0;} 
+                .hint_highlight{@extend %fontColor-lime; font-size: 30px;text-decoration-line: underline; text-underline-offset : 10px;}
+            }
+        }
+        .box_right{@extend %boxColor-white;@extend %fontColor-magenta; 
+             margin-left: auto; font-size: 25px; border-radius: 50px;
+             padding: 30px 55px 30px 30px;
+             position: relative;
+             &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 20%;
+                right:0;
+                transform: translate(-100%, 50%);
+                margin-left: 10px;
+                width:25px;
+                height: 25px;
+                background: url("../../img/arrow_rt_pink.svg") no-repeat 50% 50% / 100% auto;}
+        }
+    }
+
+    .inputWrap{display: flex; align-items: center;justify-content: center; width: 100%;
+        .inputBox{@extend %input}
+    }  
+}
+    
