@@ -632,13 +632,14 @@ input[type=text]:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   min-width: 1220px;
   padding: 0 25px 25px;
-  height: calc(100% - 230px);
   margin-top: 90px;
 }
 .contents_Inner .headTitle {
@@ -677,7 +678,6 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: calc(100% - 180px);
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {
