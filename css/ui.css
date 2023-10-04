@@ -143,7 +143,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  vertical-align: baseline;
   font-family: "SCDream", sans-serif;
   box-sizing: border-box;
 }
@@ -193,10 +192,6 @@ table {
 a {
   text-decoration: none;
   cursor: pointer;
-}
-
-body {
-  -webkit-text-size-adjust: 100%;
 }
 
 /*칼라*/
