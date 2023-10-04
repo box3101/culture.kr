@@ -745,7 +745,6 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: calc(100% - 180px);
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {
