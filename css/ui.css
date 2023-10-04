@@ -55,221 +55,153 @@
   font-family: "yg-jalnan", "sans-serif" !important;
 }
 
-:root {
-  font-size: 62.5%;
-}
-
-/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
 body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-div,
 p,
 blockquote,
 pre,
-code,
+a,
+abbr,
+acronym,
 address,
-ul,
-ol,
-li,
-nav,
-section,
-article,
-header,
-footer,
-main,
-aside,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
 dl,
 dt,
 dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
 table,
-thead,
+caption,
 tbody,
 tfoot,
-label,
-caption,
+thead,
+tr,
 th,
 td,
-form,
-fieldset,
-legend,
-hr,
-input,
-button,
-textarea,
-object,
+article,
+aside,
+canvas,
+details,
+embed,
 figure,
-figcaption {
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
-  font-family: "SCDream", sans-serif !important;
-  font-weight: 500; /* Regular */
-  color: #222;
-  letter-spacing: -0.3px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "SCDream", sans-serif;
   box-sizing: border-box;
 }
 
-body,
-input,
-select,
-textarea,
-button,
-img,
-fieldset {
-  border: none;
-}
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-address,
-cite,
-code,
-em,
-i {
-  font-style: normal;
-  font-weight: normal;
-}
-
-label,
-img,
-input,
-select,
-textarea,
-button,
-a {
-  vertical-align: middle;
-}
-
-u,
-ins,
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-.ofHidden {
-  overflow-x: hidden;
-}
-
-/* Normalize */
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration,
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input[type=number],
-input[type=text],
-input[type=password],
-input[type=url],
-input[type=email],
-input[type=tel],
-input[type=date],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-textarea {
-  resize: none;
-}
-
-/* Style */
-body.hidden {
-  position: fixed;
-  overflow-y: hidden;
-  touch-action: none;
-}
-
-a,
-button {
-  color: #2d2d2d;
-}
-
-caption > div,
-legend,
-.hide {
-  overflow: hidden;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
-  position: absolute;
-  border: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.hidden,
-.blind,
-.hd-element {
-  display: block;
-  overflow: hidden;
-  position: absolute;
-  left: -10000000000000000px;
-  top: -999999px;
-  width: 0;
-  height: 0;
-  font-size: 1px;
-}
-
-.hide-txt {
-  display: inline-block;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  font-size: 1px;
-  line-height: 0;
-  clip: rect(1px, 1px, 1px, 1px);
 }
 
 body {
-  width: 100%;
-  background: #fff;
-  min-width: 1280px;
-  -webkit-text-size-adjust: none;
-  vertical-align: baseline;
-  word-wrap: break-word;
-  word-break: break-all;
-  font-weight: 400;
-  font-size: 100%;
-  color: #2d2d2d;
-  letter-spacing: -0.05em;
-  line-height: 1.5;
+  line-height: 1;
 }
 
-@media screen and (min-width: 769px) {
-  html, body {
-    width: 100%;
-    height: 100%;
-  }
+ol,
+ul {
+  list-style: none;
 }
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*칼라*/
+.wrap {
+  min-width: 1900px;
+}
+
 /* modal */
 body.on {
   overflow-y: hidden;
@@ -696,7 +628,7 @@ input[type=text]:focus {
 
 .contents_Inner {
   position: absolute;
-  top: 0;
+  top: 392px;
   left: 50%;
   transform: translate(-50%, -28%);
   display: inline-block;
@@ -741,6 +673,7 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  width: calc(100% - 180px);
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {

@@ -153,7 +153,7 @@ input[type=text]:focus {
 .contents_Inner {
     @extend %board_blueWrap;
     position: absolute;
-    top: 0;
+    top: 392px;
     left: 50%;
     transform: translate(-50%, -28%);
     display: inline-block;
@@ -212,7 +212,7 @@ input[type=text]:focus {
         display: flex;
         flex-direction: column;
         padding: 20px;
-        // width: calc(100% - 180px);
+        width: calc(100% - 180px);
         margin-left: auto;
 
         h2 {
