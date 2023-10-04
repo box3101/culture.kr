@@ -143,8 +143,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   font-family: "SCDream", sans-serif;
   box-sizing: border-box;
@@ -195,6 +193,10 @@ table {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
 }
 
 /*칼라*/
@@ -640,6 +642,7 @@ input[type=text]:focus {
   justify-content: center;
   min-width: 1220px;
   padding: 0 25px 25px;
+  height: calc(100% - 230px);
   margin-top: 90px;
 }
 .contents_Inner .headTitle {
@@ -678,6 +681,7 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  width: calc(100% - 180px);
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {

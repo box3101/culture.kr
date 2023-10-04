@@ -165,7 +165,7 @@ input[type=text]:focus {
     justify-content: center;
     min-width: 1220px;
     padding: 0 25px 25px;
-    // height: calc(100% - 230px);
+    height: calc(100% - 230px);
     margin-top: 90px;
 
     .headTitle {
@@ -216,7 +216,7 @@ input[type=text]:focus {
         display: flex;
         flex-direction: column;
         padding: 20px;
-        // width: calc(100% - 180px);
+        width: calc(100% - 180px);
         margin-left: auto;
 
         h2 {
