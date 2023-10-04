@@ -1,0 +1,29 @@
+// .bg_top의 높이 비율에 따라 .board_blue의 bottom 위치를 동적으로 조절
+.bg_top {
+	min-height: 1507px;
+	background-size: cover;
+}
+.board_blue {
+	position: relative;
+	top: 1005px; /* .bg_top의 예상 높이의 80% 지점에 배치 */
+	bottom: auto;
+	// min-width: 1920px;
+}
+.bg_middle {
+	max-height: 0;
+	padding-bottom: 85%;
+	background-position: top;
+	height: 0;
+}
+.board_green {
+	min-height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 33%;
+}
+.por{
+	&::placeholder{
+		// font-size: 115px!important;
+	}
+}
