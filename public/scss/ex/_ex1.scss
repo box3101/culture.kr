@@ -58,6 +58,7 @@
     flex-wrap: wrap;
     width: 100%;
     border-radius: 25px;
+    margin-top: 40px;
 }
 
 
@@ -155,9 +156,12 @@ input[type=text]:focus {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    min-width: 1150px;
-    height: 800px;
-    padding-top: 150px;
+   min-width: 1220px;
+   min-height: 820px;
+
+   padding:165px 25px  25px 25px;
+   
+
 
     .headTitle {
         @extend %fontColor-purple;
@@ -324,6 +328,7 @@ input[type=text]:focus {
         align-items: center;
         justify-content: center;
         width: 100%;
+        margin-top: 40px;
 
         .inputBox {
             @extend %input
