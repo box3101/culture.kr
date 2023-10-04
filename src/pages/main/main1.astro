@@ -150,28 +150,54 @@ import Layout from "../../layouts/Layout.astro";
   <section class="bg_bottom">
     <div class="bottomWrap">
       <p>
-        <span class="period">이벤트 기간</span><span class="date"
-          >2023.10. 16(월) ~ 10. 22(일)</span>
+        <span class="period f-yg">이벤트 기간</span><span class="date"
+          >2023.10. 16(월) ~ 10. 22(일)</span
+        >
       </p>
-
       <img src="../img/img_event.png" alt="boardBackground" class="" />
-      <a href="#" id="popup-button" class="event_btn fontSC6">응모하기</a>
-
+      <a href="#" id="popup-button" class="event_btn">응모하기</a>
       <ul class="noticeWrap">
         <li class="notice_title fontSC6">유의사항</li>
         <li class="hr_border">
-            <hr>
+          <hr />
         </li>
-        <li class="notice_list fontSC5">EVENT 참여의 경우 1일 3회 참여 가능합니다.</li>
-        <li class="notice_list fontSC5">이벤트 참여 시 당첨자 발표 및 경품 전달을 위해 개인정보 이용 동의가 필요합니다.</li>
-        <li class="notice_list fontSC5">경품의 원활한 전달을 위해 개인정보를 정확하게 입력해 주세요.</li>
-        <li class="notice_list fontSC5">부정확한 개인정보로 반송된 경우 재발송 되지 않습니다.</li>
-        <li class="notice_list fontSC5">개별 연락이 필요한 경품(경품금액 5만원 초과) 당첨 시, 3회 이상 연락이 되지 않을 경우 당첨이 취소됩니다.</li>
-        <li class="notice_list fontSC5">문의사항: 1688-2220 (월~토 9시~18시 / 점심시간 12시~13시 제외. 일요일, 공휴일 휴무)</li>
-    </ul>
+        <li class="notice_list fontSC5">
+          EVENT 참여의 경우 1일 3회 참여 가능합니다.
+        </li>
+        <li class="notice_list fontSC5">
+          이벤트 참여 시 당첨자 발표 및 경품 전달을 위해 개인정보 이용 동의가
+          필요합니다.
+        </li>
+        <li class="notice_list fontSC5">
+          경품의 원활한 전달을 위해 개인정보를 정확하게 입력해 주세요.
+        </li>
+        <li class="notice_list fontSC5">
+          부정확한 개인정보로 반송된 경우 재발송 되지 않습니다.
+        </li>
+        <li class="notice_list fontSC5">
+          개별 연락이 필요한 경품(경품금액 5만원 초과) 당첨 시, 3회 이상 연락이
+          되지 않을 경우 당첨이 취소됩니다.
+        </li>
+        <li class="notice_list fontSC5">
+          문의사항: 1688-2220 (월~토 9시~18시 / 점심시간 12시~13시 제외. 일요일,
+          공휴일 휴무)
+        </li>
+      </ul>
     </div>
   </section>
-
-
-</div>
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 사용자 에이전트를 확인하여 모바일 브라우저인지 판단
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      var wrapElement = document.querySelector("html");
+      if (wrapElement) {
+        wrapElement.style.zoom = "0.75"; // 모바일에서는 min-width를 100%로 설정
+        wrapElement.style.overflowX = "hidden";
+      }
+    }
+  });
+</script>
