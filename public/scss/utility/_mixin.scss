@@ -9,7 +9,7 @@
 	@if $op-p and $op-s {
 		@include bg-op($p: $op-p, $s: $op-s);
 	} @else if $op-p {
-		@include bg-op($p: $op-p);
+		@include bg-op($p: $op-p); 
 	} @else if $op-s {
 		@include bg-op($s: $op-s);
 	}
