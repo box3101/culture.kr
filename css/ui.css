@@ -670,7 +670,7 @@ input[type=text]:focus {
 .contents_Inner .questionBox {
   position: relative;
   padding: 20px;
-  width: 86%;
+  width: 1006px;
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {
