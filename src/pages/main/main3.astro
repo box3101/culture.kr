@@ -4,7 +4,7 @@ import Popup from "../../components/popup.astro";
 ---
 
 <Layout>
-  <section class="bg_top">
+  <div class="bg_top">
     <div class="board_blue">
       <img src="../img/img_board_blue.png" alt="boardBackground" class="img_board" />
       <ul class="contents_Inner">
@@ -67,20 +67,20 @@ import Popup from "../../components/popup.astro";
         <li class="box-small">
           <div class="box_left">
             <h3 class="f-yg">힌트</h3>
-            <span class="hint_title">
+            <div class="hint_title">
               <p>2023 문화의 달 행사가 열리는 장소를 상징하는</p>
               <p>
-                <sapn class="hint_highlight f-yg">지역명이 포함된 브랜드로고</sapn>를 찾아보세요!
+                <span class="hint_highlight f-yg">지역명이 포함된 브랜드로고</span>를 찾아보세요!
               </p>
-            </span>
+            </div>
           </div>
           <a href="" class="box_right f-yg">홍보페이지 보러가기</a>
         </li>
       </ul>
     </div>
-  </section>
+  </div>
 
-  <section class="bg_middle">
+  <div class="bg_middle">
     <div class="board_green">
       <img src="../img/img_board_green.png" alt="boardBackground" class="img_board" />
       <ul class="contents_Inner">
@@ -103,7 +103,7 @@ import Popup from "../../components/popup.astro";
           <input
             class="inputBox border-firebrick -mR36"
             type="text"
-            id="answerTxt-01"
+            id="answerTxt-11"
             maxlength="1"
             placeholder="ㅅ"
             onchange="chkInput(event)"
@@ -111,7 +111,7 @@ import Popup from "../../components/popup.astro";
           <input
             class="inputBox border-firebrick -mR36"
             type="text"
-            id="answerTxt-02"
+            id="answerTxt-12"
             maxlength="1"
             placeholder="ㄷ"
             onchange="chkInput(event)"
@@ -119,7 +119,7 @@ import Popup from "../../components/popup.astro";
           <input
             class="inputBox border-firebrick -mR3 por"
             type="text"
-            id="answerTxt-05"
+            id="answerTxt-13"
             maxlength="1"
             placeholder="ㅇ"
             onchange="chkInput(event)"
@@ -128,20 +128,20 @@ import Popup from "../../components/popup.astro";
         <li class="box-small">
           <div class="box_left">
             <h3 class="f-yg">힌트</h3>
-            <span class="hint_title">
+            <div class="hint_title">
               <p>2023 문화의 달 홍보페이지의</p>
               <p>
-                <sapn class="hint_highlight f-yg">다양한 행사프로그램</sapn>들을 찾아보세요!
+                <span class="hint_highlight f-yg">다양한 행사프로그램</span>들을 찾아보세요!
               </p>
-            </span>
-                      </div>
+            </div>
+                  </div>
           <a href="" class="box_right f-yg">홍보페이지 보러가기</a>
         </li>
       </ul>
     </div>
-  </section>
+  </div>
 
-  <section class="bg_bottom">
+  <div class="bg_bottom">
     <div class="bottomWrap">
       <p>
         <span class="period f-y">이벤트 기간</span><span class="date">2023.10. 16(월) ~ 10. 22(일)</span>
@@ -167,51 +167,51 @@ import Popup from "../../components/popup.astro";
         </li>
       </ul>
     </div>
-  </section>
+  </div>
+
+  <Popup />
 </Layout>
 
-<Popup />
-
-<script defer>
+<script>
 // 모바일에서
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  if (isMobile) {
-    var wrapElement = document.querySelector("html");
-    if (wrapElement) {
-      wrapElement.style.zoom = "0.75"; // 모바일에서는 줌 0.75로 설정
-      wrapElement.style.overflowX = "hidden";
-    }
+if (isMobile) {
+  var wrapElement = document.querySelector("html");
+  if (wrapElement) {
+    wrapElement.style.zoom = "0.75"; // 모바일에서는 줌 0.75로 설정
+    wrapElement.style.overflowX = "hidden";
   }
+}
 
-  // 팝업 띄우기 닫기
-  const popupBox = document.querySelector("#popup");
-  const popBtn = document.querySelector("#popup-button");
-  const popCloseBtn = document.querySelector("#close-button");
-  const body = document.querySelector("body");
+// 팝업 띄우기 닫기
+const popupBox = document.querySelector("#popup");
+const popBtn = document.querySelector("#popup-button");
+const popCloseBtn = document.querySelector("#close-button");
+const body = document.querySelector("body");
 
-  popBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+popBtn.addEventListener("click", (e) => {
+  e.preventDefault();
 
-    popupBox.classList.add("on");
-    body.classList.add("on");
-  });
+  popupBox.classList.add("on");
+  body.classList.add("on");
+});
 
-  popCloseBtn.addEventListener("click", () => {
-    popupBox.classList.remove("on");
-    body.classList.remove("on");
-  });
+popCloseBtn.addEventListener("click", () => {
+  popupBox.classList.remove("on");
+  body.classList.remove("on");
+});
 
-  // input 한글만 입력가능하게 정규식
-  function chkInput(e) {
-    console.log(e.target.value);
-    const input = e.target; // 이벤트가 발생한 요소를 가져옴
-    const regex = /^[ㄱ-ㅎ|가-힣]+$/;
+// input 한글만 입력가능하게 정규식
+function chkInput(e) {
+  console.log(e.target.value);
+  const input = e.target; // 이벤트가 발생한 요소를 가져옴
+  const regex = /^[ㄱ-ㅎ|가-힣]+$/;
 
-    if (!regex.test(input.value)) {
-      input.value = ""; // 한글이 아닌 경우 입력 값을 지움
-      alert("한글만 입력 가능합니다.");
-      e.target.focus();
-    }
+  if (!regex.test(input.value)) {
+    input.value = ""; // 한글이 아닌 경우 입력 값을 지움
+    alert("한글만 입력 가능합니다.");
+    e.target.focus();
   }
+}
 </script>
