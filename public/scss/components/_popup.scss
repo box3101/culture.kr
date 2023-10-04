@@ -1,7 +1,9 @@
 /* modal */
-
+body.on{
+    overflow-y: hidden;
+}
 #popup {
-	// display: none;
+	visibility: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,6 +13,9 @@
 	z-index: 999;
 	overflow-y: auto;
 	/* 세로 스크롤 사용 */
+    &.on{
+        visibility:visible;
+    }
 }
 
 #popup-content {
@@ -285,5 +290,5 @@ div#popup div#popup-content .popup_titleArea .popup_subTitle {
 }
 
 .popup_logo {
-	width: 420px;
+	width: 600px;
 }

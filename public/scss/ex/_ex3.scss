@@ -22,3 +22,8 @@
 	transform: translateX(-50%);
 	top: 33%;
 }
+.por{
+	&::placeholder{
+		// font-size: 115px!important;
+	}
+}
