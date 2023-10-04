@@ -55,6 +55,10 @@
   font-family: "yg-jalnan", "sans-serif" !important;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 /* Reset */
 html,
 body,
