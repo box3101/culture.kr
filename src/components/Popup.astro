@@ -1,0 +1,63 @@
+<div id="popup">
+  <div id="popup-content">
+    <button type="button" id="close-button">X</button>
+    <h2>달아~ 달아~ 달달한 한가위콘텐츠를 부탁해!!!</h2>
+
+    <h3 class="popup_titleArea">
+      <img class="popup_logo" src="../img/img_HeadTitle.svg" />
+      <p class="popup_subTitle">한가위 보름달 이벤트</p>
+    </h3>
+    <form>
+      <p>※ 경품의 원활한 배송을 위해 개인정보를 정확하게 입력해 주세요. 당첨 시 문자로 경품이 발송됩니다.</p>
+
+      <div class="rows">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="참여자 실명을 입력해주세요." required />
+      </div>
+
+      <div class="rows">
+        <label for="phone">휴대전화</label>
+        <input type="tel" id="phone" name="phone" placeholder="“-”은 제외하고 숫자만 입력해주세요" required />
+      </div>
+
+      <div class="agreeWrap">
+        <div class="row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="allchk" name="allchk" onclick="checkBoxFunc('allchk')" />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text fwb">전체약관에 동의합니다.</span>
+          </label>
+        </div>
+        <div class="row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="privacy" name="privacy" onclick="checkBoxFunc()" />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">[필수] 개인 정보 수집 및 이용에 동의합니다.</span>
+          </label>
+        </div>
+
+        <div class="row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="consent" name="consent" onclick="checkBoxFunc()" />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">[필수] 개인 정보 취급 위탁에 동의합니다.</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="button" onclick="entryEvent();">응모완료</button>
+    </form>
+
+     <h4>
+      <img src="../img/팝업유의사항.png" />
+    </h4>
+    <ul>
+      <li>EVENT 1일 3회 참여 가능합니다.</li>
+      <li>이벤트 참여 시 당첨자 발표 및 경품 전달을 위해 개인정보 이용 동의가 필요합니다.</li>
+      <li>경품의 원활한 전달을 위해 개인정보를 정확하게 입력해 주세요.</li>
+      <li>부정확한 개인정보로 반송된 경우 재발송 되지 않습니다.</li>
+      <li>개별 연락이 필요한 경품(경품금액 5만원 초과) 당첨 시, 3회 이상 연락이 되지 않을 경우 당첨이 취소됩니다.</li>
+      <li>문의사항: 1688-2220 (월~토 9시~18시 / 점심시간 12시~13시 제외. 일요일, 공휴일 휴무)</li>
+    </ul>
+  </div>
+</div>
