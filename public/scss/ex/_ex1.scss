@@ -33,10 +33,10 @@
 .bg_bottom {
     @extend %bg-default;
     height: 100%;
-    min-height: 1590px;
-    max-height: 1590px;
+    // min-height: 1590px;
+    // max-height: 1590px;
     background-image: url("../img/bg_bottom.png");
-    z-index: -2;
+    // z-index: -2;
 }
 %board_blueWrap {
     top: 1000px;
@@ -123,7 +123,7 @@
     vertical-align: middle;
     text-align: center;
     font-weight: 800;
-    border: 6px solid #FF6C00;
+    border: 6px solid ;
     outline: none;
     font-family: "SCDream", sans-serif;
 }
@@ -155,11 +155,11 @@ input[type=text]:focus {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-   min-width: 1220px;
-   min-height: 820px;
-
-   padding:165px 25px  25px 25px;
+    justify-content:center;
+    min-width: 1220px;
+    padding: 0 25px 25px 25px;
+    height: calc(100% - 230px);
+    margin-top: 90px;
    
 
 
@@ -198,6 +198,7 @@ input[type=text]:focus {
     .box-middle {
         @extend %box-inner;
         @extend %boxColor-blue;
+        min-height: 260px
     }
 
     .box-middle_pink{ 
@@ -257,8 +258,10 @@ input[type=text]:focus {
                 height: 80px;
                 line-height: 80px;
                 font-size: 30px;
-                color: #6B33A4;
-                background-color: #45EBF8;
+                background: $color-sky;
+                color:$color-purple;
+                // color: #6B33A4;
+                // background-color: #45EBF8;
                 border-radius: 50px;
                 text-align: center;
                 position: relative;
@@ -293,7 +296,8 @@ input[type=text]:focus {
                     padding-top: 14px;
                 }
                 .hint_highlight {
-                    @extend %fontColor-lime;
+                    // @extend %fontColor-lime;
+                    color: $color-lime;
                     font-size: 30px;
                     text-decoration-line: underline;
                     text-underline-offset: 10px;
@@ -302,7 +306,8 @@ input[type=text]:focus {
         }
         .box_right {
            background: $color-white;
-            @extend %fontColor-magenta;
+           color:$color-magenta;
+            // @extend %fontColor-magenta;
             margin-left: auto;
             font-size: 25px;
             border-radius: 50px;
@@ -333,6 +338,8 @@ input[type=text]:focus {
         .inputBox {
             @extend %input
         }
+        .inputBox.border-orange{border-color: $color-orange;}
+        .inputBox.border-firebrick{border-color:$color-firebrick;}
     }
 }
 
@@ -352,4 +359,36 @@ input[type=text]:focus {
     left: 50%; transform: translateX(-50%);
     bottom: -100px;
     z-index: 10;
+}
+.bottomWrap{
+    position: relative ; display: flex; flex-direction: column; align-items: center; justify-content: center;padding: 60px 0; min-width: 1280px;
+    p{display: block;
+        .period{
+        background-color: $color-violet ;
+        font-size: 30px;
+        color: $color-white;
+        border-radius: 30px;
+        padding: 15px 28px;
+        margin-bottom: 45px;
+        display: inline-block;
+        position: relative;
+        }
+        .date{font-size: 30px;
+            color: #222;
+            font-weight: 600;
+            padding-left: 24px;}
+}
+
+            
+
+.event_btn {min-width:1280px;
+    background-color: $color-prussianBlue;
+    color: $color-white;
+    height: 100px;
+    line-height: 100px;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;}
+
 }
