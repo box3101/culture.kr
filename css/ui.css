@@ -696,20 +696,14 @@ input[type=text]:focus {
 
 .contents_Inner {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  flex-direction: column;
-  flex-wrap: wrap;
+  transform: translate(-50%, -28%);
+  display: inline-block;
   align-items: center;
   justify-content: center;
   min-width: 1220px;
   padding: 0 25px 25px;
-  height: calc(100% - 230px);
-  margin-top: 90px;
 }
 .contents_Inner .headTitle {
   font-size: 42px;
@@ -747,7 +741,6 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: calc(100% - 180px);
   margin-left: auto;
 }
 .contents_Inner .questionBox h2 {
