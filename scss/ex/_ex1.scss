@@ -121,8 +121,8 @@
 %input[type=text] {
     width: 140px;
     height: 140px;
-    line-height: 140px;
-    font-size: 100px;
+    // line-height: 140px;
+    // font-size: 100px;
     color: #111;
     background: #fff;
     vertical-align: middle;
@@ -135,6 +135,7 @@
 %input[type=text]::placeholder {
     text-align: center;
     font-size: 100px;
+    line-height: 140px;
     color: #CCCCCC;
     font-weight: 700;
     padding: 20px 0;
@@ -209,10 +210,10 @@ input[type=text]:focus {
 
     .questionBox {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         padding: 20px;
-        width: calc(100% - 180px);
+        width: 86%;
         margin-left: auto;
 
         h2 {
