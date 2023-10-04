@@ -594,6 +594,8 @@ div#popup div#popup-content .popup_titleArea .popup_subTitle {
 .contents_Inner .inputWrap [type=text].inputBox {
   width: 140px;
   height: 140px;
+  line-height: 140px;
+  font-size: 100px;
   color: #111;
   background: #fff;
   vertical-align: middle;
@@ -632,8 +634,6 @@ input[type=text]:focus {
   left: 50%;
   transform: translate(-50%, -28%);
   display: inline-block;
-  align-items: center;
-  justify-content: center;
   min-width: 1220px;
   padding: 0 25px 25px;
 }
