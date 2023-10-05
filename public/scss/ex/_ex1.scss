@@ -122,15 +122,17 @@
     width: 140px;
     height: 140px;
     line-height: 140px;
+    aspect-ratio: 1 / 1 ;
     font-size: 100px;
     color: #111;
-    background: #fff;
+    background: $color-white;
     vertical-align: middle;
     text-align: center;
     font-weight: 800;
     border: 6px solid;
     outline: none;
     font-family: "SCDream", sans-serif;
+    
 }
 %input[type=text]::placeholder {
     text-align: center;
@@ -163,7 +165,7 @@ input[type=text]:focus {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    min-width: 1220px;
+    width: 1220px;
     padding: 0 25px 25px;
     height: calc(100% - 230px);
     margin-top: 90px;
