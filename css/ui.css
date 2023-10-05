@@ -594,6 +594,7 @@ div#popup div#popup-content .popup_titleArea .popup_subTitle {
 .contents_Inner .inputWrap [type=text].inputBox {
   width: 12%;
   height: 140px;
+  aspect-ratio: 1/1;
   line-height: 140px;
   font-size: 100px;
   color: #111;
