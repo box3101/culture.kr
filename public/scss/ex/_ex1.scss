@@ -119,8 +119,9 @@
 }
 //input box
 %input[type=text] {
-    width: 140px;
+    width: 12%;
     height: 140px;
+    aspect-ratio: 1/1;
     line-height: 140px;
     font-size: 100px;
     color: #111;
@@ -135,6 +136,7 @@
 %input[type=text]::placeholder {
     text-align: center;
     font-size: 100px;
+    line-height: 140px;
     color: #CCCCCC;
     font-weight: 700;
     padding: 20px 0;
@@ -153,20 +155,16 @@ input[type=text]:focus {
 .contents_Inner {
     @extend %board_blueWrap;
     position: absolute;
-    top: 50%;
+    top: 392px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    flex-direction: column;
-    flex-wrap: wrap;
+    transform: translate(-50%, -28%);
+    display: inline-block;
     align-items: center;
     justify-content: center;
     min-width: 1220px;
     padding: 0 25px 25px;
     // height: calc(100% - 230px);
-    margin-top: 90px;
+    // margin-top: 90px;
 
     .headTitle {
         @extend %fontColor-purple;
@@ -213,10 +211,10 @@ input[type=text]:focus {
 
     .questionBox {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         padding: 20px;
-        // width: calc(100% - 180px);
+        width: 86%;
         margin-left: auto;
 
         h2 {
