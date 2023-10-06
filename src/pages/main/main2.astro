@@ -1,11 +1,41 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="asd">
-        123213
+  <main>
+    <div class="wrapper">
+      <section class="blueSection">
+        <div class="conWrapper">
+          <p class="f-yg sec-tit">
+            초성 빈칸에 직접 정답을 채워 <span class="f-yg sec-pink">첫 번째 정답</span>을 맞춰보세요!~
+          </p>
+          <div class="conBox">
+            <h2 class="con-tit">2023년 문화의달은 어디에서 진행될까요?</h2>
+            <p class="con-tt">
+              1004개의 섬으로 이루어진 지리적 특성을 표현하여 풍요로운 미래를 향히 전진하는 발전적이고 진취적인 의미의
+              지역 브랜드입니다.
+            </p>
+          </div>
+          <form action="">
+            <input type="text" placeholder="ㅊ" maxlength="1" />
+            <input type="text" placeholder="ㅅ" maxlength="1" />
+            <input type="text" placeholder="ㅅ" maxlength="1" class="mt" />
+            <input type="text" placeholder="ㅅ" maxlength="1" />
+            <input type="text" placeholder="ㅇ" maxlength="1" />
+          </form>
+          <div class="hintWrapper">
+            <div class="hint f-yg">힌트</div>
+            <p class="hint-tt">
+              2023 문화의 달 행사가 열리는 장소를 상징하는 <br />
+              <span class="f-yg hint-line">지역명이 포함된 브랜드로고</span> 를 찾아보세요!
+            </p>
+            <p class="homepage f-yg">홍보페이지 보러가기</p>
+          </div>
+        </div>
+      </section>
+      <section class="greenSection"></section>
+      <section class="Section"></section>
     </div>
-    <h2>asdasd</h2>
-    <h3>작업 시작</h3>
+  </main>
 </Layout>
