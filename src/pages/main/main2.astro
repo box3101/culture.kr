@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Popup from "../../components/popup.astro";
 ---
 
 <Layout>
@@ -66,7 +67,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="conWrapper">
           <p class="date"><span class="event f-yg">이벤트 기간</span>2023.10. 16(월) ~ 10. 22(일)</p>
           <img src="../../img/img_event.png" alt="" />
-          <a href="" class="entry">응모하기</a>
+          <a href="" id="popupBtn" class="entry">응모하기</a>
           <ul class="notice-list">
             <li class="note">유의사항</li>
             <hr />
@@ -83,4 +84,25 @@ import Layout from "../../layouts/Layout.astro";
       </section>
     </div>
   </main>
+  <Popup />
 </Layout>
+
+<script>
+  // 팝업 띄우기 닫기
+  const popupBtn = document.querySelector("#popupBtn");
+  const popup = document.querySelector("#popup");
+  const closeBtn = document.querySelector("#close-button");
+  const body = document.querySelector("body");
+
+  popupBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    popup.classList.add("on");
+    body.classList.add("on");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    popup.classList.remove("on");
+    body.classList.remove("on");
+  });
+</script>
