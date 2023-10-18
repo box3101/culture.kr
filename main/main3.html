@@ -103,12 +103,12 @@ if (!isMobiles) {
       if (focusScrollPosition !== null) window.scrollTo(0, focusScrollPosition);
     });
   });
-}
 
-// 스크롤 이벤트 = 위치값 저장, 스크롤했을때 input 커서 제거
-window.addEventListener("scroll", function () {
-  focusScrollPosition = window.scrollY;
-  $$inputElement.forEach((el) => el.blur());
-  console.log("!@3");
-});
+  // 스크롤 이벤트 = 위치값 저장, 스크롤했을때 input 커서 제거
+  window.addEventListener("scroll", function () {
+    focusScrollPosition = window.scrollY;
+    $$inputElement.forEach((el) => el.blur());
+    console.log("!@3");
+  });
+}
 </script>
