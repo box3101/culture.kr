@@ -43,67 +43,71 @@ popBtn.addEventListener("click", (e) => {
 });
 
 popCloseBtn.addEventListener("click", () => {
-  
   popupBox.classList.remove("on");
   body.classList.remove("on");
 });
 
 // 한글 입력란에 대한 포커스 이벤트 핸들러
-document.getElementById('answerTxt-01').addEventListener('focus', function () {
-    // 한글 입력란이 포커스를 받았을 때 스크롤 위치 저장
-    this.scrollPosition = window.scrollY;
+document.getElementById("answerTxt-01").addEventListener("focus", function () {
+  // 한글 입력란이 포커스를 받았을 때 스크롤 위치 저장
+  this.scrollPosition = window.scrollY;
 });
 
-document.getElementById('answerTxt-01').addEventListener('blur', function () {
-    // 한글 입력란에서 포커스가 벗어났을 때 저장한 스크롤 위치로 복원
-    window.scrollTo(0, this.scrollPosition);
+document.getElementById("answerTxt-01").addEventListener("blur", function () {
+  // 한글 입력란에서 포커스가 벗어났을 때 저장한 스크롤 위치로 복원
+  window.scrollTo(0, this.scrollPosition);
 });
 
 // 다른 곳을 클릭할 때 스크롤 위치 저장
-document.addEventListener('click', function (event) {
-    var target = event.target;
-    var input = document.getElementById('answerTxt-01');
+document.addEventListener("click", function (event) {
+  var target = event.target;
+  var input = document.getElementById("answerTxt-01");
 
-    // 클릭한 대상이 입력란이 아니고 입력란이 포커스를 가지고 있지 않으면 스크롤 위치 저장
-    if (target !== input && document.activeElement !== input) {
-        input.scrollPosition = window.scrollY;
-    }
+  // 클릭한 대상이 입력란이 아니고 입력란이 포커스를 가지고 있지 않으면 스크롤 위치 저장
+  if (target !== input && document.activeElement !== input) {
+    input.scrollPosition = window.scrollY;
+  }
 });
 
-	const $$inputElement = document.querySelectorAll('input');  // 모든 입력 필드 선택
-		let isComposing = false; // 한글 입력중인지 아닌지 판단하는 변수
-		let focusScrollPosition = null; // 스크롤 위치 저장
-		$$inputElement.forEach((el) => {
-			// 한글이 입력되었을때
-			el.addEventListener('compositionstart', function () {
-			isComposing = true;
-			// 입력된 값의 길이가 1글자 이상일 경우
-			// console.log(el.value.length);
-			// if (el.value.length >= 1) {
-			//   el.blur();
-			//}
-			});
-	
-			// 한글 입력이 종료되었을때
-			el.addEventListener('compositionend', function () {
-				isComposing = false;
-				// 작은 지연 후에 한글 입력이 아니라면 입력 필드의 포커스를 제거
-				setTimeout(() => {
-					if (!isComposing) {
-						el.blur();
-					}
-				}, 0);
-			});
-			
-			// 입력필드의 포커스가 제거 되었을때
-			el.addEventListener('blur', function () {
-				if (focusScrollPosition !== null) window.scrollTo(0, focusScrollPosition);
-			});
-		});
-		
-		// 스크롤 이벤트 = 위치값 저장, 스크롤했을때 input 커서 제거
-		window.addEventListener('scroll', function () {
-			focusScrollPosition = window.scrollY;
-			$$inputElement.forEach(el => el.blur());
-		});
+const isMobiles = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (!isMobiles) {
+  // 핸드폰이 아닐 때의 동작
+  const $$inputElement = document.querySelectorAll("input"); // 모든 입력 필드 선택
+  let isComposing = false; // 한글 입력중인지 아닌지 판단하는 변수
+  let focusScrollPosition = null; // 스크롤 위치 저장
+  $$inputElement.forEach((el) => {
+    // 한글이 입력되었을때
+    el.addEventListener("compositionstart", function () {
+      isComposing = true;
+      // 입력된 값의 길이가 1글자 이상일 경우
+      // console.log(el.value.length);
+      // if (el.value.length >= 1) {
+      //   el.blur();
+      //}
+    });
+
+    // 한글 입력이 종료되었을때
+    el.addEventListener("compositionend", function () {
+      isComposing = false;
+      // 작은 지연 후에 한글 입력이 아니라면 입력 필드의 포커스를 제거
+      setTimeout(() => {
+        if (!isComposing) {
+          el.blur();
+        }
+      }, 0);
+    });
+
+    // 입력필드의 포커스가 제거 되었을때
+    el.addEventListener("blur", function () {
+      if (focusScrollPosition !== null) window.scrollTo(0, focusScrollPosition);
+    });
+  });
+}
+
+// 스크롤 이벤트 = 위치값 저장, 스크롤했을때 input 커서 제거
+window.addEventListener("scroll", function () {
+  focusScrollPosition = window.scrollY;
+  $$inputElement.forEach((el) => el.blur());
+});
 </script>
