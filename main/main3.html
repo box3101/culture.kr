@@ -108,7 +108,11 @@ if (!isMobiles) {
   window.addEventListener("scroll", function () {
     focusScrollPosition = window.scrollY;
     $$inputElement.forEach((el) => el.blur());
-    this.alert("123")
+    this.alert("123");
   });
 }
+
+window.addEventListener("scroll", function () {
+  this.alert("123");
+});
 </script>
